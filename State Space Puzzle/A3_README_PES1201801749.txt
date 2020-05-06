@@ -1,0 +1,28 @@
+Fine Techniques
+Assignment 3 : State Space search
+Done By :
+	Thushar V Karanth
+	PES1201801749
+
+1) Compilation commands (in ubuntu)
+		gcc -c A3_header_PES1201801749.h A3_client_PES1201801749.c
+		gcc -c A3_header_PES1201801749.h A3_impl_PES1201801749.c
+		gcc A3_impl_PES1201801749.o A3_client_PES1201801749.c
+		./a.out
+	In case make files are being used :
+		a.out :	A3_impl_PES1201801749.o A3_client_PES1201801749.o
+			gcc A3_impl_PES1201801749.o A3_client_PES1201801749.o
+		A3_impl_PES1201801749.o :	A3_header_PES1201801749.h A3_impl_PES1201801749.c
+			gcc -c A3_impl_PES1201801749.c
+		A3_client_PES1201801749.o :	A3_header_PES1201801749.h A3_client_PES1201801749.c
+			gcc -c A3_client_PES1201801749.c
+2) The state is defined in a structure, and 6 possible transitions are implemented.
+3) The order of the 6 functions are as mentioned in the word document
+4) The list used is a doubly linked list, each node consists of a state and pointers to next and previous nodes.
+5) The list structure holds the head and tail nodes of the list, so as to manipulate with ease.
+6) Membership of state is checked using the is_repeated function
+7) A wrapper function is called to get the total number of solutions and displaying the solutions.
+8) This function is an example of a backtracking algorithm.
+9) It uses the above functions and ignores repeating states.
+10) At the end of the code, the algorithm for backtracking is shown.
+11) Since it implements a backtracking algorithm, the space and time are combinatorial.

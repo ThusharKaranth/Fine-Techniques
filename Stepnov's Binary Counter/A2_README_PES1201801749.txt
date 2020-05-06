@@ -1,0 +1,17 @@
+Fine Techniques
+Assignment 2 - Stepnov's Binary Counter to find second biggest element
+
+Thushar V Karanth	PES1201801749
+
+1. This implementation is done using an array (dynamic) to store the temporary lists during transitions in number of matches played.
+	1.1. A structure named node is used. It has two things data of int type and next which points to the another node.
+2. No special compilation options required.
+3. The output is in the format for all the arrays with greater than or equal to 2.
+4. The code assumes that the numbers given to the function are within length elements. If this fails, junk integer value gets printed.
+5. The code has used three helper functions.
+	 5.1. Log is computed using a while loop.
+	 5.2. Printing the lists
+	 5.3. Creating the lists
+6. The code also assumes the header file being used is "assignment_2.h".
+7. Further, the output is printed onto 'STDOUT' and not into any file.
+8. The size used is restricted to O((log n)^2).

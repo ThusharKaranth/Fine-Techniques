@@ -1,0 +1,17 @@
+Fine Techniques
+Assignment 4 : BINARY SEARCH TREE ON HARDDISK
+Done By :Thushar V Karanth
+        PES1201801749
+
+Key takeaway: 
+->Have used 6 wrapper function.
+->Have implemented all functions using recurtion
+->Any invalid input is taken care
+->Will work for any condition
+->Doesn't depend on client side code
+->Can take any value for key(it should be in int range)
+
+Additional Notes:
+->If there is no file of the given filename it is created
+->In both preorder and inorder ,if no element is there in tree then it will display "\n"
+->Considers the name of header file is assignment_4.h

@@ -1,0 +1,66 @@
+SRN : PES1201801749
+NAME : Thushar V Karanth
+
+Fine Techniques Assignment 1:Memory Management
+1. Allocation Policy :	FIRST FIT
+2. Bookkeeping structure details :
+	int flag -> 0 if free, and 1 if allocated.
+	int size_of_block -> size of the allocated block.
+	int next_index -> -1 if there is no next block, otherwise index to the next block.
+3. A test main() function is commented in the implementation. It is neccesary to free 'extern char *p' in the client function to prevent memory leak.
+4. Uses sequential search through all blocks to find free blocks -> O(n)
+5. Transition form one block to another is through index element i in most functions. (next) index is used for displaying memory map.
+6. Uses static int SIZE to store allocated size.
+8. Uses BOOK_SIZE which stores book structure's size.
+7. LOGIC:
+	allocate(int n)
+    	if(p is not NULL)
+       		free(p);
+       		p <- NULL;
+    	dynamically allocating p using malloc function of char type
+    	if(p is not NULL)
+        	make a new book with next_index as -1,size_of_block as n-BOOK_SIZE
+		SIZE <- n
+	else
+		SIZE <- 0
+	
+	mymalloc(int n)
+	while(block i exists in p)
+		initialize address to NULL
+		if block i is not free or block size is lower than required
+			i <- next block
+		else
+			point address to i
+            		if the block size is more than the size+BLOCK_SIZE
+				create a new book
+				update the present book
+				return address
+			else
+				update the present book
+				return address
+	return address
+	
+	myfree(void *b)
+	while block i exists in p
+		if b is equal to address of block i
+			if previous block is present and free
+				if next block is present
+					if next block is free
+						merge previous, present and next blocks and update previous block details
+					else
+						merge previous and present and update previous block details
+				else
+					merge previous and present and update previous block details
+			else
+				if next block is present 
+					if next block is free
+						merge present and next blocks and update present block details
+					else
+						update present block details
+				else
+					update present block details
+			update present block details
+		i <- next block
+	
+
+8. For compiling : gcc 1749_A1.c client.c
